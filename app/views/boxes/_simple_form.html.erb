@@ -1,0 +1,24 @@
+<h4>Test CSV 784</h4>
+<%= simple_form_for(box, validate: true) do |form| %>
+  <% if box.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(box.errors.count, "error") %> prohibited this box from being saved:</h2>
+
+      <ul>
+        <% box.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.input :name %>
+  <%= form.input :description %>
+  <%= form.input :a_date, prompt: true %>
+  <%= form.input :a_datetime, prompt: true %>
+  <%= form.input :a_time, prompt: true %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
