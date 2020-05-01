@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @box.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @box.description %>
+</p>
+
+<p>
+  <strong>A date:</strong>
+  <%= @box.a_date %>
+</p>
+
+<p>
+  <strong>A datetime:</strong>
+  <%= @box.a_datetime %>
+</p>
+
+<p>
+  <strong>A time:</strong>
+  <%= @box.a_time %>
+</p>
+
+<%= link_to 'Edit', edit_box_path(@box) %> |
+<%= link_to 'Back', boxes_path %>
