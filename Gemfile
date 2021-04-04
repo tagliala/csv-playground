@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.0'
 
 gem 'jquery-rails', '~> 4.4'
+
+# Client Side Validations
 gem 'client_side_validations', '~> 18.0'
 gem 'client_side_validations-simple_form', '~> 13.0'
 
