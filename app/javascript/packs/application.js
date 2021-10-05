@@ -3,11 +3,13 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+import '@hotwired/turbo-rails'
+
 // require("@rails/ujs").start()
-require("turbolinks").start()
 // require("@rails/activestorage").start()
 // require("channels")
-require('@client-side-validations/simple-form/dist/simple-form.bootstrap4.esm')
+
+import '@client-side-validations/simple-form/src/simple-form.bootstrap4'
 
 ClientSideValidations.callbacks.form.fail = function(form, eventData) {
   const {
