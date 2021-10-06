@@ -6,8 +6,8 @@ ruby '3.0.2'
 gem 'jquery-rails', '~> 4.4'
 
 # Client Side Validations
-gem 'client_side_validations', '~> 18.1'
-gem 'client_side_validations-simple_form', '~> 13.0'
+gem 'client_side_validations', '~> 19.1'
+gem 'client_side_validations-simple_form', '~> 14.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.4.1'
