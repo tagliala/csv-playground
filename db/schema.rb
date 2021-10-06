@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_05_01_093759) do
     t.string "string_presence"
     t.text "textarea_presence"
     t.string "select_presence"
+    t.string "select_multi_presence"
     t.string "string_acceptance"
     t.boolean "boolean_acceptance"
     t.string "string_confirm"

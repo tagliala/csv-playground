@@ -11,6 +11,8 @@ class CreateBoxes < ActiveRecord::Migration[6.0]
       t.text :textarea_presence
       t.string :select_presence
 
+      t.string :select_multi_presence
+
       t.string :string_acceptance
       t.boolean :boolean_acceptance
 

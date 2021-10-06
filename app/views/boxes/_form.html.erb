@@ -33,6 +33,11 @@
       <%= form.label :select_presence %>
       <%= form.select :select_presence, %w[option1 option2], prompt: true %>
     </div>
+
+    <div class="field">
+      <%= form.label :select_multi_presence %>
+      <%= form.select :select_multi_presence, %w[option1 option2], {}, multiple: true %>
+    </div>
   </fieldset>
 
   <fieldset>

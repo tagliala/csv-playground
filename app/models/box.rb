@@ -5,6 +5,8 @@ class Box < ApplicationRecord
   validates :textarea_presence, presence: true
   validates :select_presence, presence: true
 
+  validates :select_multi_presence, presence: true
+
   validates :string_acceptance, acceptance: { accept: 'yes' }
   validates :boolean_acceptance, acceptance: true
 
