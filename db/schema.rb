@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_01_093759) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_08_27_080028) do
   create_table "boxes", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -43,10 +42,10 @@ ActiveRecord::Schema.define(version: 2020_05_01_093759) do
     t.integer "integer_numericality_other_than_other_field"
     t.integer "integer_numericality_other_field"
     t.date "a_date"
-    t.datetime "a_datetime"
+    t.datetime "a_datetime", precision: nil
     t.time "a_time"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
