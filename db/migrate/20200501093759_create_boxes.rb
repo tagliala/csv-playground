@@ -37,15 +37,18 @@ class CreateBoxes < ActiveRecord::Migration[6.0]
       t.integer :integer_numericality_less_than_or_equal_to
       t.integer :integer_numericality_odd
       t.integer :integer_numericality_other_than
-      t.float :float_numericality_only_integer
       t.integer :integer_numericality_other_than_other_field
       t.integer :integer_numericality_other_field
+      t.float :float_numericality_only_integer
 
       t.date :a_date
       t.datetime :a_datetime
       t.time :a_time
 
       t.timestamps
+
+      # Simple-Form specific validations
+      t.string :string_presence_hint
     end
   end
 end

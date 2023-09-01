@@ -38,14 +38,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_27_080028) do
     t.integer "integer_numericality_less_than_or_equal_to"
     t.integer "integer_numericality_odd"
     t.integer "integer_numericality_other_than"
-    t.float "float_numericality_only_integer"
     t.integer "integer_numericality_other_than_other_field"
     t.integer "integer_numericality_other_field"
+    t.float "float_numericality_only_integer"
     t.date "a_date"
     t.datetime "a_datetime", precision: nil
     t.time "a_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "string_presence_hint"
+  end
+
+  create_table "small_boxes", force: :cascade do |t|
+    t.integer "box_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["box_id"], name: "index_small_boxes_on_box_id"
   end
 
 end

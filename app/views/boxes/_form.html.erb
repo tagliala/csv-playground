@@ -179,6 +179,20 @@
     </div>
   </fieldset>
 
+  <fieldset>
+    <legend>Local Uniqueness</legend>
+
+    <%= form.fields_for :small_boxes do |small_box_form| %>
+      <%- if small_box_form.index.positive? %>
+        <hr>
+      <%- end %>
+      <div class="field">
+        <%= small_box_form.label :name %>
+        <%= small_box_form.text_field :name %>
+      </div>
+    <% end %>
+  </fieldset>
+
   <hr>
 
   <div class="field">

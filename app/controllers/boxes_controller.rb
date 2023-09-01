@@ -15,6 +15,7 @@ class BoxesController < ApplicationController
   # GET /boxes/new
   def new
     @box = Box.new
+    2.times { @box.small_boxes.new }
   end
 
   # GET /boxes/1/edit

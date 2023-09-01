@@ -1,4 +1,7 @@
 class Box < ApplicationRecord
+  has_many :small_boxes
+  accepts_nested_attributes_for :small_boxes
+
   validates :string_absence, absence: true
   validates :string_presence, presence: true
 
@@ -34,4 +37,7 @@ class Box < ApplicationRecord
   validates :float_numericality_only_integer, numericality: { only_integer: true }
 
   validates :integer_numericality_other_than_other_field, numericality: { other_than: :integer_numericality_other_field }
+
+  # Simple-Form specific validations
+  validates :string_presence_hint, presence: true
 end
