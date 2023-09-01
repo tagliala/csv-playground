@@ -4,7 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.2.2'
 
 gem 'client_side_validations', '~> 21.0'
-gem 'client_side_validations-simple_form', '~> 15.0'
 
 gem 'rails', '7.0.7.2'
 gem 'sqlite3', '~> 1.6'
