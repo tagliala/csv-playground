@@ -7,6 +7,7 @@ class CreateBoxes < ActiveRecord::Migration[6.0]
       # Validations
       t.string :string_absence
       t.string :string_presence
+      t.string :string_presence_hint
 
       t.text :textarea_presence
       t.string :select_presence

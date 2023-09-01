@@ -1,6 +1,7 @@
 class Box < ApplicationRecord
   validates :string_absence, absence: true
   validates :string_presence, presence: true
+  validates :string_presence_hint, presence: true
 
   validates :textarea_presence, presence: true
   validates :select_presence, presence: true
