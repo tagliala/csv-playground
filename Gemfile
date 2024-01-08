@@ -7,7 +7,7 @@ gem 'client_side_validations', '~> 21.0'
 
 gem 'rails', '7.0.7.2'
 gem 'sqlite3', '~> 1.6'
-gem 'puma', '~> 6.3'
+gem 'puma', '~> 6.4'
 gem 'shakapacker', '~> 7.0'
 gem 'jquery-rails', '~> 4.4'
 gem 'sassc'
