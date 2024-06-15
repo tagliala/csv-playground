@@ -1,21 +1,21 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.2'
+ruby '3.3.2'
 
-gem 'client_side_validations', '~> 21.0'
+gem 'client_side_validations', '~> 22.2'
 
-gem 'rails', '7.0.8.1'
-gem 'sqlite3', '~> 1.6'
+gem 'rails', '7.1.3.4'
+gem 'sqlite3', '~> 1.7'
 gem 'puma', '~> 6.4'
-gem 'shakapacker', '~> 7.0'
+gem 'shakapacker', '~> 8.0'
 gem 'jquery-rails', '~> 4.4'
 gem 'sassc'
 gem 'sprockets-rails'
-gem 'redis', '~> 5.0'
+gem 'redis', '~> 5.2'
 gem 'turbo-rails'
-gem 'jbuilder', '~> 2.11'
-gem 'bootsnap', '~> 1.16', require: false
+gem 'jbuilder', '~> 2.12'
+gem 'bootsnap', '~> 1.18', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -24,7 +24,7 @@ end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
