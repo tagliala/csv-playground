@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Box < ApplicationRecord
   has_many :small_boxes
   accepts_nested_attributes_for :small_boxes
@@ -15,8 +17,8 @@ class Box < ApplicationRecord
 
   validates :string_confirm, confirmation: true
 
-  validates :string_exclusion, exclusion: { in: %w(www us ca jp) }
-  validates :string_inclusion, inclusion: { in: %w(www us ca jp) }
+  validates :string_exclusion, exclusion: { in: %w[www us ca jp] }
+  validates :string_inclusion, inclusion: { in: %w[www us ca jp] }
 
   validates :string_format_with, format: { with: /\A[A-Z]+\z/ }
   validates :string_format_without, format: { without: /\A[A-Z]+\z/ }
@@ -36,7 +38,8 @@ class Box < ApplicationRecord
   validates :integer_numericality_other_than, numericality: { other_than: 1 }
   validates :float_numericality_only_integer, numericality: { only_integer: true }
 
-  validates :integer_numericality_other_than_other_field, numericality: { other_than: :integer_numericality_other_field }
+  validates :integer_numericality_other_than_other_field,
+            numericality: { other_than: :integer_numericality_other_field }
 
   # Simple-Form specific validations
   validates :string_presence_hint, presence: true

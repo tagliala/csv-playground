@@ -4,8 +4,10 @@
 // that code so it'll be compiled.
 
 import '@hotwired/turbo-rails'
+import Rails from '@rails/ujs'
 
-require("@rails/ujs").start()
+Rails.start()
+
 require("@rails/activestorage").start()
 require("channels")
 
