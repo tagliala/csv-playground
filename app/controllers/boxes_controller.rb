@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class BoxesController < ApplicationController
-  before_action :set_box, only: [:show, :edit, :update, :destroy]
+  before_action :set_box, only: %i[show edit update destroy]
 
   # GET /boxes
   # GET /boxes.json
@@ -9,8 +11,7 @@ class BoxesController < ApplicationController
 
   # GET /boxes/1
   # GET /boxes/1.json
-  def show
-  end
+  def show; end
 
   # GET /boxes/new
   def new
@@ -19,8 +20,7 @@ class BoxesController < ApplicationController
   end
 
   # GET /boxes/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /boxes
   # POST /boxes.json
@@ -63,13 +63,14 @@ class BoxesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_box
-      @box = Box.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def box_params
-      params.require(:box).permit(:name, :description, :a_date, :a_datetime, :a_time)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_box
+    @box = Box.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def box_params
+    params.require(:box).permit(:name, :description, :a_date, :a_datetime, :a_time)
+  end
 end
