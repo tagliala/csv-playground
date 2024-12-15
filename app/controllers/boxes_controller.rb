@@ -32,7 +32,7 @@ class BoxesController < ApplicationController
         format.html { redirect_to @box, notice: 'Box was successfully created.' }
         format.json { render :show, status: :created, location: @box }
       else
-        format.html { render :new }
+        format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @box.errors, status: :unprocessable_entity }
       end
     end
@@ -46,7 +46,7 @@ class BoxesController < ApplicationController
         format.html { redirect_to @box, notice: 'Box was successfully updated.' }
         format.json { render :show, status: :ok, location: @box }
       else
-        format.html { render :edit }
+        format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @box.errors, status: :unprocessable_entity }
       end
     end
