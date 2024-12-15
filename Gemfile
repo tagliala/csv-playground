@@ -8,13 +8,12 @@ ruby '3.3.6'
 gem 'rails', '8.0.1'
 
 gem 'client_side_validations', '~> 22.3'
+gem 'client_side_validations-simple_form', '~> 16.0'
 
 gem 'bootsnap', '~> 1.18', require: false
 gem 'jbuilder'
-gem 'jquery-rails', '~> 4.4'
 gem 'puma', '~> 6.5'
 gem 'redis', '~> 5.3'
-gem 'sassc'
 gem 'shakapacker', '~> 8.0'
 gem 'sprockets-rails'
 gem 'sqlite3'
