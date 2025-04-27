@@ -6,6 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'rails', '8.0.2'
 
 gem 'client_side_validations', '~> 22.3'
+gem 'client_side_validations-simple_form', '~> 16.0'
 
 gem 'bootsnap', '~> 1.18', require: false
 gem 'jbuilder'
@@ -15,9 +16,6 @@ gem 'shakapacker', '8.2.0'
 gem 'sprockets-rails'
 gem 'sqlite3'
 gem 'turbo-rails'
-
-gem 'jquery-rails', '~> 4.4'
-gem 'sassc'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
