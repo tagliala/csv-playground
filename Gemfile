@@ -3,19 +3,17 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.3.6'
-
-gem 'rails', '8.0.1'
+gem 'rails', '8.0.2'
 
 gem 'client_side_validations', '~> 22.3'
 
 gem 'bootsnap', '~> 1.18', require: false
 gem 'jbuilder'
 gem 'jquery-rails', '~> 4.4'
-gem 'puma', '~> 6.5'
-gem 'redis', '~> 5.3'
+gem 'puma', '~> 6.6'
+gem 'redis', '~> 5.4'
 gem 'sassc'
-gem 'shakapacker', '~> 8.0'
+gem 'shakapacker', '8.2.0'
 gem 'sprockets-rails'
 gem 'sqlite3'
 gem 'turbo-rails'
