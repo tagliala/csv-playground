@@ -3,9 +3,9 @@
   "private": true,
   "engines": {
     "node": ">= 20.0",
-    "yarn": "^1.22.21"
+    "pnpm": "^10.8.0"
   },
-  "packageManager": "yarn@1.22.21",
+  "packageManager": "pnpm@10.8.0",
   "dependencies": {
     "@babel/core": "^7.26.10",
     "@babel/plugin-transform-runtime": "^7.26.10",
