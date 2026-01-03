@@ -20,9 +20,18 @@ importers:
       '@babel/runtime':
         specifier: ^7.28.4
         version: 7.28.4
+      '@client-side-validations/client-side-validations':
+        specifier: ^0.4.0
+        version: 0.4.0(jquery@3.7.1)
+      '@client-side-validations/simple-form':
+        specifier: ^0.4.0
+        version: 0.4.0(@client-side-validations/client-side-validations@0.4.0(jquery@3.7.1))
       '@hotwired/turbo-rails':
         specifier: ^8.0.20
         version: 8.0.20
+      '@popperjs/core':
+        specifier: ^2.11.8
+        version: 2.11.8
       '@rails/actioncable':
         specifier: ^8.1.100
         version: 8.1.100
@@ -38,6 +47,9 @@ importers:
       babel-plugin-macros:
         specifier: ^3.1.0
         version: 3.1.0
+      bootstrap:
+        specifier: ~5.3.8
+        version: 5.3.8(@popperjs/core@2.11.8)
       compression-webpack-plugin:
         specifier: ^11.1.0
         version: 11.1.0(webpack@5.104.1)
@@ -50,12 +62,15 @@ importers:
       exports-loader:
         specifier: ^5.0.0
         version: 5.0.0(webpack@5.104.1)
+      expose-loader:
+        specifier: ^5.0.1
+        version: 5.0.1(webpack@5.104.1)
+      jquery:
+        specifier: ^3.7.1
+        version: 3.7.1
       mini-css-extract-plugin:
         specifier: ^2.9.4
         version: 2.9.4(webpack@5.104.1)
-      postcss:
-        specifier: ^8.5.6
-        version: 8.5.6
       postcss-flexbugs-fixes:
         specifier: ^5.0.2
         version: 5.0.2(postcss@8.5.6)
@@ -72,7 +87,7 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
       sass:
-        specifier: ~1.97.1
+        specifier: 1.97.1
         version: 1.97.1
       sass-loader:
         specifier: ^16.0.6
@@ -609,6 +624,18 @@ packages:
     resolution: {integrity: sha512-qQ5m48eI/MFLQ5PxQj4PFaprjyCTLI37ElWMmNs0K8Lk3dVeOdNpB3ks8jc7yM5CDmVC73eMVk/trk3fgmrUpA==}
     engines: {node: '>=6.9.0'}
 
+  '@client-side-validations/client-side-validations@0.4.0':
+    resolution: {integrity: sha512-+349chE4AZipgEEsrrsQLQh2vAGlh/F3+6XIPHoeaBZEEQepoOg9DqoWxQoNR2Cad8HIMRKCxktTZ7S3aG4New==}
+    engines: {node: '>=12.0.0', yarn: '>=1.19.0'}
+    peerDependencies:
+      jquery: '>= 1.12.4 < 4.0.0'
+
+  '@client-side-validations/simple-form@0.4.0':
+    resolution: {integrity: sha512-NEkuXNreW1dFor5pcUb/QKaKE8nkA3w6kaHoivsXyxT554WEx8DION15P2t985EyCSmrPRTMnkky6bCYl3A2Fg==}
+    engines: {node: '>=12.0.0', yarn: '>=1.19.0'}
+    peerDependencies:
+      '@client-side-validations/client-side-validations': ^0.4.0
+
   '@csstools/cascade-layer-name-parser@2.0.5':
     resolution: {integrity: sha512-p1ko5eHgV+MgXFVa4STPKpvPxr6ReS8oS2jzTukjR74i5zJNyWO1ZM1m8YKBXnzDKWfBN1ztLYlHxbVemDD88A==}
     engines: {node: '>=18'}
@@ -1072,6 +1099,9 @@ packages:
     resolution: {integrity: sha512-dfUnCxiN9H4ap84DvD2ubjw+3vUNpstxa0TneY/Paat8a3R4uQZDLSvWjmznAY/DoahqTHl9V46HF/Zs3F29pg==}
     engines: {node: '>= 10.0.0'}
 
+  '@popperjs/core@2.11.8':
+    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
+
   '@rails/actioncable@8.1.100':
     resolution: {integrity: sha512-j4vJQqz51CDVYv2UafKRu4jiZi5/gTnm7NkyL+VMIgEw3s8jtVtmzu9uItUaZccUg9NJ6o05yVyBAHxNfTuCRA==}
 
@@ -1376,6 +1406,11 @@ packages:
 
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
+
+  bootstrap@5.3.8:
+    resolution: {integrity: sha512-HP1SZDqaLDPwsNiqRqi5NcP0SSXciX2s9E+RyqJIIqGo+vJeN5AJVM98CXmW/Wux0nQ5L7jeWUdplCEf0Ee+tg==}
+    peerDependencies:
+      '@popperjs/core': ^2.11.8
 
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
@@ -1805,6 +1840,12 @@ packages:
     peerDependencies:
       webpack: ^5.0.0
 
+  expose-loader@5.0.1:
+    resolution: {integrity: sha512-5YPZuszN/eWND/B+xuq5nIpb/l5TV1HYmdO6SubYtHv+HenVw9/6bn33Mm5reY8DNid7AVtbARvyUD34edfCtg==}
+    engines: {node: '>= 18.12.0'}
+    peerDependencies:
+      webpack: ^5.0.0
+
   express@4.22.1:
     resolution: {integrity: sha512-F2X8g9P1X7uCPZMA3MVf9wcTqlyNp7IhH5qPCI0izhaOIYXaW9L535tGA3qmjRzpH+bZczqq7hVKxTR4NWnu+g==}
     engines: {node: '>= 0.10.0'}
@@ -2078,6 +2119,9 @@ packages:
   jiti@2.6.1:
     resolution: {integrity: sha512-ekilCSN1jwRvIbgeg/57YFh8qQDNbwDb9xT/qu2DAHbFFZUicIl4ygVaAvzveMhMVr3LnpSKTNnwt8PoOfmKhQ==}
     hasBin: true
+
+  jquery@3.7.1:
+    resolution: {integrity: sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -3993,6 +4037,14 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
+  '@client-side-validations/client-side-validations@0.4.0(jquery@3.7.1)':
+    dependencies:
+      jquery: 3.7.1
+
+  '@client-side-validations/simple-form@0.4.0(@client-side-validations/client-side-validations@0.4.0(jquery@3.7.1))':
+    dependencies:
+      '@client-side-validations/client-side-validations': 0.4.0(jquery@3.7.1)
+
   '@csstools/cascade-layer-name-parser@2.0.5(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)':
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.5(@csstools/css-tokenizer@3.0.4)
@@ -4453,6 +4505,8 @@ snapshots:
       '@parcel/watcher-win32-x64': 2.5.1
     optional: true
 
+  '@popperjs/core@2.11.8': {}
+
   '@rails/actioncable@8.1.100': {}
 
   '@rails/activestorage@8.1.100':
@@ -4818,6 +4872,10 @@ snapshots:
       multicast-dns: 7.2.5
 
   boolbase@1.0.0: {}
+
+  bootstrap@5.3.8(@popperjs/core@2.11.8):
+    dependencies:
+      '@popperjs/core': 2.11.8
 
   braces@3.0.3:
     dependencies:
@@ -5216,6 +5274,10 @@ snapshots:
       source-map: 0.6.1
       webpack: 5.104.1(webpack-cli@6.0.1)
 
+  expose-loader@5.0.1(webpack@5.104.1):
+    dependencies:
+      webpack: 5.104.1(webpack-cli@6.0.1)
+
   express@4.22.1:
     dependencies:
       accepts: 1.3.8
@@ -5497,6 +5559,8 @@ snapshots:
       supports-color: 8.1.1
 
   jiti@2.6.1: {}
+
+  jquery@3.7.1: {}
 
   js-tokens@4.0.0: {}
 
