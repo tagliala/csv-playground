@@ -12,91 +12,11 @@
   <% end %>
 
   <fieldset>
-    <legend>Absence / Presence</legend>
-
-    <%= form.input :string_absence %>
-    <%= form.input :string_presence %>
-    <%= form.input :string_presence_hint, hint: 'Validation should go above hint' %>
-    <%= form.input :textarea_presence %>
-    <%= form.input :select_presence, as: :select %>
-    <%= form.input :select_multi_presence, as: :select, input_html: { multiple: true } %>
-  </fieldset>
-
-  <fieldset>
-    <legend>Acceptance (string: 'yes')</legend>
-
-    <%= form.input :string_acceptance %>
-    <%= form.input :boolean_acceptance %>
-  </fieldset>
-
-  <fieldset>
-    <legend>Confirmation</legend>
-
-    <%= form.input :string_confirm %>
-    <%= form.input :string_confirm_confirmation %>
-  </fieldset>
-
-  <fieldset>
-    <legend>Exclusion / Inclusion (%w[www us ca jp])</legend>
-
-    <%= form.input :string_exclusion %>
-    <%= form.input :string_inclusion %>
-  </fieldset>
-
-  <fieldset>
-    <legend>Format (/\A[A-Z]+\z/)</legend>
-
-    <%= form.input :string_format_with %>
-    <%= form.input :string_format_without %>
-  </fieldset>
-
-  <fieldset>
     <legend>Length (in: 5..8, is: 3, max: 4, min: 4)</legend>
 
-    <%= form.input :string_length_in %>
-    <%= form.input :string_length_is %>
-    <%= form.input :string_length_maximum %>
-    <%= form.input :string_length_minimum %>
     <%= form.input :string_length_maximum_proc %>
     <%= form.input :string_length_minimum_proc %>
   </fieldset>
-
-  <fieldset>
-    <legend>Numericality (gt: 3, gte: 3, eq: 4, lt: 5, lte: 5, neq: 1)</legend>
-
-    <%= form.input :integer_numericality_even %>
-    <%= form.input :integer_numericality_greater_than %>
-    <%= form.input :integer_numericality_greater_than_or_equal_to %>
-    <%= form.input :integer_numericality_equal_to %>
-    <%= form.input :integer_numericality_less_than %>
-    <%= form.input :integer_numericality_less_than_or_equal_to %>
-    <%= form.input :integer_numericality_odd %>
-    <%= form.input :integer_numericality_other_than %>
-    <%= form.input :float_numericality_only_integer %>
-    <%= form.input :integer_numericality_other_than_other_field %>
-    <%= form.input :integer_numericality_other_field %>
-  </fieldset>
-
-  <fieldset>
-    <legend>Local Uniqueness</legend>
-
-    <%= form.simple_fields_for :small_boxes do |small_box_form| %>
-      <%- if small_box_form.index.positive? %>
-        <hr>
-      <%- end %>
-      <div class="field">
-        <%= small_box_form.input :name %>
-      </div>
-    <% end %>
-  </fieldset>
-
-  <hr>
-
-  <%= form.input :name %>
-  <%= form.input :description, input_html: { rows: 3 } %>
-  <%= form.input :a_date %>
-  <%= form.input :a_datetime %>
-  <%= form.input :a_time %>
 
   <div class="mb-3">
     <%= form.submit class: 'btn btn-primary' %>
