@@ -27,6 +27,8 @@ class Box < ApplicationRecord
   validates :string_length_is, length: { is: 3 }
   validates :string_length_maximum, length: { maximum: 4 }
   validates :string_length_minimum, length: { minimum: 4 }
+  validates :string_length_maximum_proc, length: { maximum: proc { 4 } }
+  validates :string_length_minimum_proc, length: { minimum: proc { 4 } }
 
   validates :integer_numericality_even, numericality: { even: true }
   validates :integer_numericality_greater_than, numericality: { greater_than: 3 }
