@@ -3,17 +3,17 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import '@hotwired/turbo-rails'
 import Rails from '@rails/ujs'
+import '@client-side-validations/simple-form/src/index.bootstrap4'
 
 Rails.start()
 
 require("@rails/activestorage").start()
 require("channels")
 
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
+ClientSideValidations.callbacks.form.fail = function(form, eventData) {
+  const { settings } = form[0].ClientSideValidations
+  const firstErrorElement = form[0].querySelector(`.${settings.html_settings.error_class}`)
+
+  firstErrorElement.parentElement.scrollIntoView({ behavior: 'smooth' })
+};

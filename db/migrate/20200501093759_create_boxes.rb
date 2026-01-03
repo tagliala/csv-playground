@@ -31,6 +31,7 @@ class CreateBoxes < ActiveRecord::Migration[6.0]
       t.string :string_length_maximum
       t.string :string_length_minimum
 
+      t.string :string_length_is_proc
       t.string :string_length_maximum_proc
       t.string :string_length_minimum_proc
 

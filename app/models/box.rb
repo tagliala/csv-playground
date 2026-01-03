@@ -27,8 +27,13 @@ class Box < ApplicationRecord
   validates :string_length_is, length: { is: 3 }
   validates :string_length_maximum, length: { maximum: 4 }
   validates :string_length_minimum, length: { minimum: 4 }
+
+  validates :string_length_is, length: { is: proc { 3 } }
   validates :string_length_maximum_proc, length: { maximum: proc { 4 } }
-  validates :string_length_minimum_proc, length: { minimum: proc { 4 } }
+
+  # FIXME: this is causing formtastic to raise
+  # undefined method 'to_i' for an instance of Proc
+  # validates :string_length_minimum_proc, length: { minimum: proc { 4 } }
 
   validates :integer_numericality_even, numericality: { even: true }
   validates :integer_numericality_greater_than, numericality: { greater_than: 3 }
