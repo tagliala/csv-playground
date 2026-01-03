@@ -50,10 +50,10 @@ SimpleForm.setup do |config|
   config.wrappers :vertical_form, class: 'mb-3 ciao' do |b|
     b.use :html5
     b.use :placeholder
-    b.optional :maxlength
-    b.optional :minlength
-    b.optional :pattern
-    b.optional :min_max
+    b.use :maxlength
+    b.use :minlength
+    b.use :pattern
+    b.use :min_max
     b.optional :readonly
     b.use :label, class: 'form-label'
     b.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'

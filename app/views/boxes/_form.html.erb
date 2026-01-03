@@ -1,4 +1,4 @@
-<%= simple_form_for(box, validate: true) do |form| %>
+<%= simple_form_for(box) do |form| %>
   <% if box.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(box.errors.count, "error") %> prohibited this box from being saved:</h2>
