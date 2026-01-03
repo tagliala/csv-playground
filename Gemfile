@@ -3,25 +3,25 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '8.0.2'
+gem 'rails', '8.1.1'
 
 gem 'client_side_validations', '~> 22.3'
 
-gem 'bootsnap', '~> 1.18', require: false
+gem 'bootsnap', require: false
 gem 'jbuilder'
-gem 'puma', '~> 6.6'
-gem 'redis', '~> 5.4'
-gem 'shakapacker', '8.2.0'
+gem 'puma'
+gem 'redis'
+gem 'shakapacker', '9.4.0'
 gem 'sprockets-rails'
 gem 'sqlite3'
 gem 'turbo-rails'
 
-gem 'jquery-rails', '~> 4.4'
+gem 'jquery-rails'
 gem 'sassc'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug', platforms: %i[mri windows]
 end
 
 group :development do
@@ -30,4 +30,4 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'tzinfo-data', platforms: %i[windows jruby]
