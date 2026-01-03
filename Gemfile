@@ -8,6 +8,8 @@ gem 'rails', '8.1.1'
 gem 'client_side_validations', '~> 22.3'
 gem 'client_side_validations-simple_form', '~> 16.0'
 
+gem 'simple_form', github: 'heartcombo/simple_form', branch: 'ca-validator-length-proc'
+
 gem 'bootsnap', require: false
 gem 'jbuilder'
 gem 'puma'
