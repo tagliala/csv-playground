@@ -5,7 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails', '8.1.3'
 
-gem 'client_side_validations', '~> 23.1'
+gem 'client_side_validations', '~> 24.0'
 
 gem 'bootsnap', require: false
 gem 'jbuilder'
@@ -16,7 +16,6 @@ gem 'sprockets-rails'
 gem 'sqlite3'
 gem 'turbo-rails'
 
-gem 'jquery-rails'
 gem 'sassc'
 
 group :development, :test do
