@@ -1,0 +1,49 @@
+version: 2
+multi-ecosystem-groups:
+  shakapacker:
+    schedule:
+      interval: daily
+      time: "04:00"
+    open-pull-requests-limit: 10
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+      time: "04:00"
+    cooldown:
+      default-days: 5
+  - package-ecosystem: bundler
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "04:00"
+    cooldown:
+      default-days: 5
+    groups:
+      rubocop:
+        patterns:
+          - "rubocop*"
+    patterns:
+      - "shakapacker"
+    multi-ecosystem-group: shakapacker
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "04:00"
+    cooldown:
+      default-days: 5
+    groups:
+      babel:
+        patterns:
+          - "@babel/*"
+      rails:
+        patterns:
+          - "@rails/*"
+      webpack:
+        patterns:
+          - "webpack*"
+    patterns:
+      - "shakapacker"
+    multi-ecosystem-group: shakapacker
