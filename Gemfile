@@ -11,7 +11,7 @@ gem 'bootsnap', require: false
 gem 'jbuilder'
 gem 'puma'
 gem 'redis'
-gem 'shakapacker', '9.7.0'
+gem 'shakapacker', '10.0.0'
 gem 'sprockets-rails'
 gem 'sqlite3'
 gem 'turbo-rails'
