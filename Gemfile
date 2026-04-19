@@ -5,7 +5,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails', '8.1.3'
 
+gem 'simple_form'
 gem 'client_side_validations', '~> 24.0'
+gem 'client_side_validations-simple_form', '~> 18.0'
 
 gem 'bootsnap', require: false
 gem 'jbuilder'
