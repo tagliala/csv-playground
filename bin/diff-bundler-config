@@ -62,7 +62,7 @@ script_path = File.join(
   "shakapacker",
   "package",
   "bin",
-  "shakapacker-config.cjs"
+  "diff-bundler-config.cjs"
 )
 
 unless File.file?(script_path)
