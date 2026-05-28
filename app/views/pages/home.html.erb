@@ -2,3 +2,38 @@
 <p>
   <%= link_to 'Boxes', boxes_path %>
 </p>
+
+<section>
+  <h2>Hidden Sub-Checkbox Validation Repro</h2>
+
+  <p>
+    This form keeps the sub-checkbox hidden until <strong>Checkbox Field</strong> is checked.
+    With hidden enabled inputs included in the client-side validation selectors, the hidden
+    sub-checkbox still gets validated even when it is not visible.
+  </p>
+
+  <%= form_with(model: @visibility_bug_demo, url: root_path, method: :get, local: true, validate: true) do |form| %>
+    <div class="field">
+      <%= form.label :visible_select, 'Visible Select' %>
+      <%= form.select :visible_select,
+                      [['Option 1', 'option_1'], ['Option 2', 'option_2']],
+                      { prompt: 'Select one' } %>
+    </div>
+
+    <div class="field">
+      <%= form.check_box :checkbox_field,
+                         include_hidden: false,
+                         data: { sub_checkbox_toggle: 'sub-checkbox-field' } %>
+      <%= form.label :checkbox_field, 'Checkbox Field' %>
+    </div>
+
+    <div id="sub-checkbox-field" class="field" hidden>
+      <%= form.check_box :sub_checkbox_field, include_hidden: false %>
+      <%= form.label :sub_checkbox_field, 'Sub-Checkbox Field' %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Validate form' %>
+    </div>
+  <% end %>
+</section>
