@@ -78,8 +78,8 @@ importers:
         specifier: ^16.0.8
         version: 16.0.8(sass@1.77.6)(webpack@5.107.2)
       shakapacker:
-        specifier: 10.2.0
-        version: 10.2.0(@babel/core@7.29.7)(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7))(@babel/preset-env@7.29.7(@babel/core@7.29.7))(@babel/runtime@7.29.7)(babel-loader@10.1.1(@babel/core@7.29.7)(webpack@5.107.2))(compression-webpack-plugin@12.0.0(webpack@5.107.2))(css-loader@7.1.4(webpack@5.107.2))(mini-css-extract-plugin@2.10.2(webpack@5.107.2))(sass-loader@16.0.8(sass@1.77.6)(webpack@5.107.2))(sass@1.77.6)(terser-webpack-plugin@5.6.1(postcss@8.5.16)(webpack@5.107.2))(webpack-assets-manifest@6.5.2(webpack@5.107.2))(webpack-cli@7.0.2)(webpack-dev-server@5.2.6)(webpack@5.107.2)
+        specifier: 10.3.0
+        version: 10.3.0(@babel/core@7.29.7)(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7))(@babel/preset-env@7.29.7(@babel/core@7.29.7))(@babel/runtime@7.29.7)(babel-loader@10.1.1(@babel/core@7.29.7)(webpack@5.107.2))(compression-webpack-plugin@12.0.0(webpack@5.107.2))(css-loader@7.1.4(webpack@5.107.2))(mini-css-extract-plugin@2.10.2(webpack@5.107.2))(sass-loader@16.0.8(sass@1.77.6)(webpack@5.107.2))(sass@1.77.6)(terser-webpack-plugin@5.6.1(postcss@8.5.16)(webpack@5.107.2))(webpack-assets-manifest@6.5.2(webpack@5.107.2))(webpack-cli@7.0.2)(webpack-dev-server@5.2.6)(webpack@5.107.2)
       terser-webpack-plugin:
         specifier: ^5.6.1
         version: 5.6.1(postcss@8.5.16)(webpack@5.107.2)
@@ -3004,8 +3004,8 @@ packages:
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  shakapacker@10.2.0:
-    resolution: {integrity: sha512-4jHAL3pCjI1BVf45hFPRVrsMRV54VIVVYrw1MmyX/Ks6rl2ydVt3rxpdzzxH4HFZ4umW6AsuAVSVucZE13taCw==}
+  shakapacker@10.3.0:
+    resolution: {integrity: sha512-+MsocLZYaOPoE5giLygxiIF/xpdfl4nsoENtcCI2RPEM50OX4Jb6LKqrJdsK3leJiXXcbVOy6YYCbIqasduTzQ==}
     engines: {node: ^20.19.0 || >=22.12.0, yarn: '>=1 <5'}
     hasBin: true
     peerDependencies:
@@ -3034,7 +3034,7 @@ packages:
       webpack: ^5.101.0
       webpack-assets-manifest: ^5.0.6 || ^6.0.0
       webpack-cli: ^4.9.2 || ^5.0.0 || ^6.0.0 || ^7.0.0
-      webpack-dev-server: ^5.2.2
+      webpack-dev-server: ^5.2.2 || ^6.0.0
       webpack-subresource-integrity: ^5.1.0
     peerDependenciesMeta:
       '@babel/core':
@@ -6666,7 +6666,7 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  shakapacker@10.2.0(@babel/core@7.29.7)(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7))(@babel/preset-env@7.29.7(@babel/core@7.29.7))(@babel/runtime@7.29.7)(babel-loader@10.1.1(@babel/core@7.29.7)(webpack@5.107.2))(compression-webpack-plugin@12.0.0(webpack@5.107.2))(css-loader@7.1.4(webpack@5.107.2))(mini-css-extract-plugin@2.10.2(webpack@5.107.2))(sass-loader@16.0.8(sass@1.77.6)(webpack@5.107.2))(sass@1.77.6)(terser-webpack-plugin@5.6.1(postcss@8.5.16)(webpack@5.107.2))(webpack-assets-manifest@6.5.2(webpack@5.107.2))(webpack-cli@7.0.2)(webpack-dev-server@5.2.6)(webpack@5.107.2):
+  shakapacker@10.3.0(@babel/core@7.29.7)(@babel/plugin-transform-runtime@7.29.7(@babel/core@7.29.7))(@babel/preset-env@7.29.7(@babel/core@7.29.7))(@babel/runtime@7.29.7)(babel-loader@10.1.1(@babel/core@7.29.7)(webpack@5.107.2))(compression-webpack-plugin@12.0.0(webpack@5.107.2))(css-loader@7.1.4(webpack@5.107.2))(mini-css-extract-plugin@2.10.2(webpack@5.107.2))(sass-loader@16.0.8(sass@1.77.6)(webpack@5.107.2))(sass@1.77.6)(terser-webpack-plugin@5.6.1(postcss@8.5.16)(webpack@5.107.2))(webpack-assets-manifest@6.5.2(webpack@5.107.2))(webpack-cli@7.0.2)(webpack-dev-server@5.2.6)(webpack@5.107.2):
     dependencies:
       js-yaml: 4.3.0
       pack-config-diff: 0.1.0
